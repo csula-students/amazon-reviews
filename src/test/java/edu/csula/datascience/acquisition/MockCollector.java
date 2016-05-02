@@ -8,16 +8,16 @@ import java.util.stream.Collectors;
  */
 public class MockCollector implements Collector<SimpleModel, MockData> {
     @Override
-    public Collection<SimpleModel> mungee(Collection<MockData> src) {
-        // in your example, you might need to check src.hasNext() first
-        return src
+    public Collection<SimpleModel> download(Source<MockData> src) {
+        return src.provide()
             .stream()
-            .filter(data -> data.getContent() != null)
             .map(SimpleModel::build)
             .collect(Collectors.toList());
     }
 
     @Override
-    public void save(Collection<SimpleModel> data) {
+    public boolean save(Collection<SimpleModel> data) {
+        // TODO: maybe replace with file write and test file
+        return true;
     }
 }
