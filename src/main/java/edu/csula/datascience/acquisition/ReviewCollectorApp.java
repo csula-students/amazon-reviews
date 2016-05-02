@@ -6,6 +6,7 @@ public class ReviewCollectorApp {
 		ReviewSource source = new ReviewSource("C:/A/Big Data CS594/complete.json/complete.json");
 		ReviewCollector collector = new ReviewCollector();
 		Review r = null;
+		double start = System.currentTimeMillis();
 		int i = 0;
 		while (source.hasNext()) {
 			r = source.next();
@@ -15,5 +16,8 @@ public class ReviewCollectorApp {
 				System.out.println(i);
 			}
 		}
+		double time = System.currentTimeMillis() - start;
+		System.out.println(i + " elements added");
+		System.out.println(time/1000 + " seconds");
 	}
 }

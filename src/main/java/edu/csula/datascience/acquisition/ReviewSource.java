@@ -38,28 +38,4 @@ public class ReviewSource implements Source<Review> {
 		return null;
 	}
 
-	// public void readStream() {
-	// try {
-	// // JsonReader reader = new JsonReader(new InputStreamReader(stream,
-	// // "UTF-8"));
-	// // Gson gson = new GsonBuilder().create();
-	// byte[] bytes = new byte[400];
-	// stream.read(bytes, 0, 400);
-	// System.out.println(new String(bytes, StandardCharsets.UTF_8));
-	// return;/*
-	// * // Read file in stream mode reader.beginObject(); while
-	// * (reader.hasNext()) { // Read data into object model
-	// * Review review = gson.fromJson(reader, Review.class);
-	// * System.out.println(review.getReviewText()); break; }
-	// * reader.close();
-	// */
-	// } catch (UnsupportedEncodingException ex) {
-	// Logger.getLogger(ReviewSource.class.getName()).log(Level.SEVERE, null,
-	// ex);
-	// } catch (IOException ex) {
-	// Logger.getLogger(ReviewSource.class.getName()).log(Level.SEVERE, null,
-	// ex);
-	// }
-	// }
-
 }
