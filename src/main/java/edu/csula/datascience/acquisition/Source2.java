@@ -1,5 +1,6 @@
 package edu.csula.datascience.acquisition;
 
+import java.util.Collection;
 import java.util.Iterator;
 
 /**
@@ -13,5 +14,5 @@ import java.util.Iterator;
  * After storing these objects in memory, then you can download them using
  * Collector#mungee
  */
-public interface Source<T> extends Iterator<T> {
+public interface Source2<T> extends Iterator<Collection<T>> {
 }
