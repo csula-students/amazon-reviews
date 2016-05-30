@@ -14,12 +14,19 @@ public class Review {
 	private String summary;
 	private Long unixReviewTime;
 	private String reviewTime;
+	private long datetime;
+	
+	private long reviewLength;
+	private long summaryLength;
+	private long numericRatio;
+	private long capitalRatio;
+	private long hash;
 
 	public Review() {
 	}
 
 	public Review(String reviewerID, String asin, String reviewerName, Integer[] helpful, String reviewText,
-			float overall, String summary, Long unixReviewTime, String reviewTime) {
+			float overall, String summary, Long unixReviewTime, String reviewTime, long datetime) {
 		this.reviewerID = reviewerID;
 		this.asin = asin;
 		this.reviewerName = reviewerName;
@@ -29,11 +36,12 @@ public class Review {
 		this.summary = summary;
 		this.unixReviewTime = unixReviewTime;
 		this.reviewTime = reviewTime;
+		this.datetime = datetime;
 	}
 
 	@Override
 	public String toString() {
-		return "Reviewer Id: " + reviewerID + " Text: " + reviewText;
+		return "Reviewer Id: " + reviewerID + " Text: " + reviewText + " Time: " + reviewTime;
 	}
 
 	public String getReviewerID() {
@@ -106,6 +114,54 @@ public class Review {
 
 	public void setReviewTime(String reviewTime) {
 		this.reviewTime = reviewTime;
+	}
+
+	public long getDatetime() {
+		return datetime;
+	}
+
+	public void setDatetime(long datetime) {
+		this.datetime = datetime;
+	}
+
+	public long getReviewLength() {
+		return reviewLength;
+	}
+
+	public void setReviewLength(long reviewLength) {
+		this.reviewLength = reviewLength;
+	}
+
+	public long getSummaryLength() {
+		return summaryLength;
+	}
+
+	public void setSummaryLength(long summaryLength) {
+		this.summaryLength = summaryLength;
+	}
+
+	public long getNumericRatio() {
+		return numericRatio;
+	}
+
+	public void setNumericRatio(long numericRatio) {
+		this.numericRatio = numericRatio;
+	}
+
+	public long getCapitalRatio() {
+		return capitalRatio;
+	}
+
+	public void setCapitalRatio(long capitalRatio) {
+		this.capitalRatio = capitalRatio;
+	}
+
+	public long getHash() {
+		return hash;
+	}
+
+	public void setHash(long hash) {
+		this.hash = hash;
 	}
 
 }

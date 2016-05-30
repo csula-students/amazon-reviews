@@ -61,7 +61,7 @@ task acquireTwitter(type: JavaExec) {
 task esExample(type: JavaExec) {
   classpath = sourceSets.main.runtimeClasspath
 
-  main = 'edu.csula.datascience.examples.ElasticSearchExampleApp'
+  main = 'edu.csula.datascience.elasticsearch.ElasticSearchApp'
 }
 
 task wrapper(type: Wrapper) {

@@ -12,7 +12,7 @@ public class ReviewCollectorApp {
 			r = source.next();
 			r = collector.mungee(r);
 			collector.save(r);
-			if(i++ % 10000 == 0) {
+			if(i++ % 100000 == 0) {
 				System.out.println(i);
 			}
 		}
